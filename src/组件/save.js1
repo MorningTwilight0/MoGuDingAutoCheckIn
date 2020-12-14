@@ -1,0 +1,45 @@
+/ *
+* @作者：小康
+* @日期：2020-11-06 16:29:54
+* @LastEditTime：2020-11-06 23:09:21
+* @Description：开始执行签到
+ * /
+
+函数 saveType （） {
+  var  date  =  new  Date （）;
+  让 type  =  “ START” ;
+  如果 （日期。调用getHours （） > = 11  && 日期。调用getHours （） <= 15 ） {
+    type  =  “ END” ;
+  }
+  控制台。日志（日期）;
+  返回 类型;
+}
+异步 功能 保存（axios ， planId ） {
+  让 type  =  saveType （）;
+  让 dataForm  =  {
+    设备：“ iOS” ，
+    planId：planId ，
+    国家：“中国” ，
+    状态：“正常” ，
+    AttenanceType：“” ，
+    地址：“山西省太原市小店区小店街道真武路” ，
+    类型：类型，
+    经度：“ 112.57555708332828” ，
+    城市：“太原市” “ ，
+    province：“山西省” “ ，
+    纬度：“ 37.7307684872808” ，
+  } ;
+  控制台。log （“ Type：” ， type ）;
+  let  {  data：res  }  = 等待 axios 。要求（{
+    方法：“发布” ，
+    网址：“ / attendence / clock / v1 / save” ，
+    数据：dataForm ，
+  } ）;
+  让 msg  =  false ;
+  如果 （RES 。代码 ==  200 ） {
+    //签到成功
+    msg  =  true ;
+  }
+  返回 msg ;
+}
+模块。出口 = 储蓄;
