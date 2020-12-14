@@ -22,7 +22,7 @@ async function save(axios, planId) {
     country: "中国",
     state: "NORMAL",
     attendanceType: "",
-    address: "天安门广场",
+    address: "山西省太原市小店区小店街道真武路",
     type: type,
     longitude: "116.404267",
     city: "北京市",
