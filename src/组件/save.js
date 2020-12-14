@@ -24,10 +24,10 @@ async function save(axios, planId) {
     attendanceType: "",
     address: "山西省太原市小店区小店街道真武路",
     type: type,
-    longitude: "116.404267",
-    city: "北京市",
-    province: "北京市",
-    latitude: "39.910131",
+    longitude: "112.57555708332828",
+    city: "太原市"",
+    province: "山西省"",
+    latitude: "37.7307684872808",
   };
   console.log("Type:", type);
   let { data: res } = await axios.request({
